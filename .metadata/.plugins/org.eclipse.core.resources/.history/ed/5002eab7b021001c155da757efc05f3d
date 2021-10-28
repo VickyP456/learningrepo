@@ -1,0 +1,41 @@
+package trial;
+
+import java.io.IOException;
+
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
+
+public class ExecuteExcelRead {
+	String excelFileName ="InputTestData";
+	
+	@DataProvider
+	public String[][] sendData() throws IOException {
+		
+		String[][] abc = ExcelRead.excelDataRead(excelFileName);
+		return abc;
+	}
+	
+	@Parameters({"cityName","cityState","Country"})
+	@Test
+	public void testRun(String city, String state,String countryName) {
+		
+		System.out.println(city);
+		System.out.println(state);
+		System.out.println(countryName);
+		
+		
+	}
+	
+	
+	
+	/*
+	 * public String[] method1() {
+	 * 
+	 * String[] abc = {"input","output"};
+	 * 
+	 * return abc; }
+	 */
+
+}
+

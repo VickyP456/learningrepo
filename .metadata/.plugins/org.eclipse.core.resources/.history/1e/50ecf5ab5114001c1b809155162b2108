@@ -1,0 +1,18 @@
+package trial;
+
+import org.junit.Test;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.RemoteWebDriver;
+
+public class DemoClass {
+	
+	@Test
+	public void browserLaunch() {
+		
+        System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");  
+        RemoteWebDriver driver = new ChromeDriver();
+        driver.get("https://chromedriver.chromium.org/downloads");
+		
+	}
+
+}
